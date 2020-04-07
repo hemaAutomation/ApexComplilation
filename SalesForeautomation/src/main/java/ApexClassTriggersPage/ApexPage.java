@@ -31,7 +31,7 @@ public class ApexPage{
 	
 	public ApexPage(WebDriver driver){
 		wait = new WebDriverWait(driver,240);
-		waitclass = new WebDriverWait(driver,500);
+		waitclass = new WebDriverWait(driver,700);
 		PageFactory.initElements(driver, this);
 	}
 
@@ -115,20 +115,13 @@ public class ApexPage{
 	public void compileClass_Success(){
 		waitclass.until(ExpectedConditions.visibilityOf(classSuccess));
 		String msgclass = classSuccess.getText();
-		System.out.println("Triggers are compiled :" + msgclass);
+		System.out.println("Classes are compiled :" + msgclass);
 	}
 	
 	public void compileTrigger_Success(){
 		wait.until(ExpectedConditions.visibilityOf(triggerSuccess));
 		String msgtrigger = triggerSuccess.getText();
 		System.out.println("Triggers are compiled :" + msgtrigger);
-	}
-	
-	public void logout() throws InterruptedException
-	{
-		userName.click();
-		logout.click();
-		Thread.sleep(1000);
 	}
 		
 	

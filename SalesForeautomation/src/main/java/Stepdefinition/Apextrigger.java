@@ -45,11 +45,7 @@ public class Apextrigger extends CommonStepDefinition{
 		apexPage.compileTrigger_Success();
 		switchToWindow(driver,0);
 		apexPage.compileClass_Success();
+		closebrowser();
 	}
 	
-	@Then("^click on username$")
-	public void click_on_username() throws InterruptedException{
-		scrollDown(driver, apexPage.userName);
-		apexPage.clickon_loginbtn();
-	}
 }

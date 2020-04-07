@@ -67,15 +67,4 @@ public class CommonStepDefinition {
 		} 
 	}
 	
-	public void scrollDown(WebDriver driver, WebElement ele) throws InterruptedException
-	{
-		try {				
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].scrollIntoView();", ele);
-			Thread.sleep(3000);			
-		}catch(Exception e)
-		{
-			e.toString();
-		}		
-	}
 }

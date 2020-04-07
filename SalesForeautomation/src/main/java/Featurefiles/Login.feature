@@ -29,7 +29,3 @@ Scenario: Compile apex triggers
 	Then compile all triggers
 	Then Display success message
 	
-@logout
-Scenario: Logout from Salesfore
-
-    Then click on username
